@@ -11,5 +11,6 @@ user1 = User(user1_id, access_token)
 
 user2 = User(user2_id, access_token)
 
-print(user1.friends_in_common(user2))
+# print(user1.friends_in_common(user2))
 
+print(user2)

@@ -23,3 +23,5 @@ class User:
 		result = list(set(self.friends).intersection(other.friends))
 		return result
 
+	def __str__(self):
+		return 'https://vk.com/id{}'.format(self.user_id)
