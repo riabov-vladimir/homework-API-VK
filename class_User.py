@@ -20,10 +20,10 @@ class User:
 		result = friends_get(self.user_id)
 		return result
 
-	def __and__(self, other_user):
+	def __and__(self, other_user) -> list:
 		mutual_friends_ids = list(set(self.friends_list()).intersection(other_user.friends_list()))
 		result = map(lambda x: User(x, access_token), mutual_friends_ids)
 		return list(result)
 
-	def __str__(self):
+	def __str__(self) -> str:
 		return 'https://vk.com/id{}'.format(self.user_id)
